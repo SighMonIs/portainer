@@ -1,0 +1,20 @@
+#	This is a template for creating new entries.
+#    {
+#     "name": "AppName", # This is the name given to the container itself
+#	  "title": "AppName", # This is the title of the Template (note: removes all spaces and changes to lower case)
+#	  "description": "Description for AppName", # Description shown in template
+#	  "categories": ["All"], # List of categories to select from a drop down
+#     "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/AppName.png", # The logo url
+#      "platform": "linux", # Not sure
+#      "repository": { # Link to the compose file
+#	    "stackfile": "Template/Stack/organizr.yml",
+#	    "url": "https://github.com/SighMonIs/portainer"
+#     },  
+#      "type": 1, # Type 1 = container, Type 2 = unknown, Type 3 = stack
+#	  "volumes": [
+#		{
+#		  "bind": "/portainer/Files/AppData/Config/organizr", # Location on the host
+#		  "container": "/config" # Location in the app container
+#		}
+#	  ]
+#    },
