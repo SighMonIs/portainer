@@ -20,7 +20,7 @@
       "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/organizr-icon.png",
       "name": "organizr-v2",
       "platform": "linux",
-      "ports": ["80/tcp"],
+      "ports": ["9949:80/tcp"],
       "restart_policy": "unless-stopped",
       "title": "Organizr",
       "type": 1,
