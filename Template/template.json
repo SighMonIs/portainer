@@ -21,7 +21,7 @@
           "default": "1000",
           "label": "PGID",
           "name": "PGID"
-        }
+        },
         {
           "label": "TZ",
           "name": "TZ",
