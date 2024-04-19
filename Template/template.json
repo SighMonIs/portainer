@@ -1,5 +1,5 @@
 {
-  "version": "1",
+  "version": "2",
   "templates": [
     {
       "name": "Organizr2 - name",
@@ -12,7 +12,7 @@
 	    "stackfile": "Template/Stack/organizr.yml",
 	    "url": "https://github.com/SighMonIs/portainer"
       },  
-      "type": 3,
+      "type": 1,
 	  "volumes": [
 		{
 		  "bind": "/portainer/Files/AppData/Config/organizr",
