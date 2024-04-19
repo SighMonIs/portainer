@@ -1,15 +1,13 @@
 {
   "version": "2",
   "templates": [
-    { 
-	  
+    {
       "categories": ["Other", "Tools"],
 	  "title": "Organizr",
 	  "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/organizr-icon.png",
       "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
 	  "type": 1,
 	  "platform": "linux",
-	  
 	  "name": "organizr-v2",
       "env": [
         {
@@ -23,7 +21,6 @@
           "name": "PGID"
         }
       ],
-      
 	  "image": "organizr/organizr:latest",
       "ports": ["9949:80/tcp"],
       "restart_policy": "unless-stopped",
