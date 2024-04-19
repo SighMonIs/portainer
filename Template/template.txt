@@ -1,8 +1,8 @@
 {
   "categories": ["All"],
   "name": "AppName",
-
   "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/AppName.png",
+  "description": "Description for AppName",
   "platform": "linux",
   "title": "AppName",
   "stackfile": "Template/Stack/organizr.yml",

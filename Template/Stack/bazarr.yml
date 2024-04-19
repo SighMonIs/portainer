@@ -6,11 +6,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Athens
+      - TZ=Australia/Melbourne
     volumes:
-      - /portainer/Files/AppData/Config/bazarr/config:/config
-      - /portainer/Movies:/movies #optional
-      - /portainer/TV:/tv #optional
+      - /portainer/apps/bazarr/config:/config
+      - /portainer/Movies:/movies
+      - /portainer/TV:/tv
     ports:
       - 6767:6767
     restart: unless-stopped
