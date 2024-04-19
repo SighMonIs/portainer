@@ -1,0 +1,15 @@
+version: "3"
+services:
+  netalertx:
+    container_name: netalertx
+    # use the below line if you want to test the latest dev image
+    # image: "jokobsk/netalertx-dev:latest" 
+    image: "jokobsk/netalertx:latest"      
+    network_mode: "host"        
+    restart: unless-stopped
+    volumes:
+      - /portainer/Files/AppData/Config/netalertx/config:/home/pi/pialert/config 
+      - /portainer/Files/AppData/Config/netalertx/db:/home/pi/pialert/db    
+    environment:
+      - TZ=Europe/Athens      
+      - PORT=40211
