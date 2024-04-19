@@ -41,31 +41,18 @@
       "title": "Overseerr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
       "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
-      "type": 1
+      "type": 1,
       "platform": "linux",
       "name": "Overseerr",
       "image": "lscr.io/linuxserver/overseerr:latest",
-      "ports": ["5055:5055/tcp"]
+      "ports": ["5055:5055/tcp"],
       "env": [
-        {
-          "default": "1000",
-          "label": "PUID"
-        },
-        {
-          "default": "1000",
-          "name": "PGID"
-        }
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "default": "Australia/Melbourne"
-        }
+        {"default": "1000", "label": "PUID"},
+        {"default": "1000", "name": "PGID"}
+        {"name": "TZ", "label": "TZ", "default": "Australia/Melbourne"}
       ],
       "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/overseerr",
-          "container": "/config"
-        }
+        {"bind": "/portainer/Files/AppData/Config/overseerr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     }
