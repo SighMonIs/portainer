@@ -9,6 +9,8 @@
       "type": 1,
       "platform": "linux",
       "name": "organizr-v2",
+      "image": "organizr/organizr:latest",
+      "ports": ["9949:80/tcp"],
       "env": [
         {
           "default": "1000",
@@ -20,16 +22,14 @@
           "label": "PGID",
           "name": "PGID"
         }
-      ],
-      "image": "organizr/organizr:latest",
-      "ports": ["9949:80/tcp"],
-      "restart_policy": "unless-stopped",
+      ],      
       "volumes": [
         {
           "bind": "/portainer/Files/AppData/Config/Organizr",
           "container": "/config"
         }
-      ]
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
