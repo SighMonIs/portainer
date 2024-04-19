@@ -8,7 +8,7 @@
       "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
       "type": 1,
       "platform": "linux",
-	  "name": "organizr-v2",
+      "name": "organizr-v2",
       "env": [
         {
           "default": "1000",
@@ -21,7 +21,7 @@
           "name": "PGID"
         }
       ],
-	  "image": "organizr/organizr:latest",
+	    "image": "organizr/organizr:latest",
       "ports": ["9949:80/tcp"],
       "restart_policy": "unless-stopped",
       "volumes": [
