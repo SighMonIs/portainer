@@ -34,7 +34,7 @@
     {
       "categories": ["Tools"],
       "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
-      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/overseerr-icon.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
       "name": "Overseerr",
       "platform": "linux",
       "repository": {
