@@ -24,10 +24,10 @@
         }
       ],      
       "volumes": [
-        
+        {
           "bind": "/portainer/Files/AppData/Config/Organizr",
           "container": "/config"
-        
+        }
       ],
       "restart_policy": "unless-stopped"
     }
