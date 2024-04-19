@@ -11,7 +11,7 @@
           "name": "PUID"
         },
         {
-          "default": "100",
+          "default": "1000",
           "label": "PGID",
           "name": "PGID"
         }
@@ -19,7 +19,7 @@
       "image": "organizr/organizr:latest",
       "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/organizr-icon.png",
       "name": "organizr-v2",
-      "platform": "linux",
+
       "ports": ["9949:80/tcp"],
       "restart_policy": "unless-stopped",
       "title": "Organizr",
