@@ -1,10 +1,10 @@
 {
   "categories": ["All"],
   "name": "AppName",
-  "description": "Description for AppName",
-  "title": "AppName",
+
   "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/AppName.png",
   "platform": "linux",
+  "title": "AppName",
   "stackfile": "Template/Stack/organizr.yml",
   "url": "https://github.com/SighMonIs/portainer"  
   "type": 1,
