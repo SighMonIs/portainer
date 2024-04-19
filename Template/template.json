@@ -4,11 +4,11 @@
     {
       "categories": ["Other", "Tools"],
       "title": "Organizr",
-      "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/organizr-icon.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/organizr.png",
       "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
       "type": 1,
       "platform": "linux",
-      "name": "organizr-v2",
+      "name": "Organizr",
       "image": "organizr/organizr:latest",
       "ports": ["9949:80/tcp"],
       "env": [
@@ -22,10 +22,14 @@
           "label": "PGID",
           "name": "PGID"
         }
+        {
+          "label": "TZ",
+          "name": "TZ",
+          "default": "Australia/Melbourne"
       ],      
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Organizr",
+          "bind": "/portainer/Files/AppData/Config/organizr",
           "container": "/config"
         }
       ],
@@ -33,16 +37,36 @@
     },
     {
       "categories": ["Tools"],
-      "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
-      "name": "Overseerr",
-      "platform": "linux",
-      "repository": {
-	    "stackfile": "Template/Stack/overseerr.yml",
-	    "url": "https://github.com/SighMonIs/portainer"
-      },  
       "title": "Overseerr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
+      "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
       "type": 1
+      "platform": "linux",
+      "name": "Overseerr",
+      "image": "lscr.io/linuxserver/overseerr:latest",
+      "ports": ["5055:5055/tcp"]
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID"
+        },
+        {
+          "default": "1000",
+          "name": "PGID"
+        }
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "Australia/Melbourne"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/overseerr",
+          "container": "/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
