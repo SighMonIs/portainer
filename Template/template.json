@@ -26,7 +26,7 @@
           "label": "TZ",
           "name": "TZ",
           "default": "Australia/Melbourne"
-      ],      
+      ],
       "volumes": [
         {
           "bind": "/portainer/Files/AppData/Config/organizr",
