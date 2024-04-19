@@ -3,7 +3,7 @@
   "templates": [
     {
       "categories": ["All"],
-	  "title": "Bazarr",
+      "title": "Bazarr",
       "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download Subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.", 
       "logo": "https://www.bazarr.media/assets/img/logo.png",
       "platform": "linux",
