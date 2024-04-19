@@ -1,3 +1,26 @@
+#	This is a template for creating new entries.
+#    {
+#     "name": "Organizr2 - name", # This is the name given to the container itself
+#	  "title": "Organizr2 - title", # This is the title of the Template
+#	  "description": "Description for organizr", # Description shown in template
+#	  "categories": ["All"], # List of categories to select from a drop down
+#     "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/adguard.png", # The logo...
+#      "platform": "linux", # Not sure
+#      "repository": {
+#	    "stackfile": "Template/Stack/organizr.yml",
+#	    "url": "https://github.com/SighMonIs/portainer"
+#     },  
+#      "type": 1,
+#	  "volumes": [
+#		{
+#		  "bind": "/portainer/Files/AppData/Config/organizr",
+#		  "container": "/config"
+#		}
+#	  ]
+#    },
+
+
+
 {
   "version": "2",
   "templates": [
@@ -12,7 +35,7 @@
 	    "stackfile": "Template/Stack/organizr.yml",
 	    "url": "https://github.com/SighMonIs/portainer"
       },  
-      "type": 1,
+      "type": 2,
 	  "volumes": [
 		{
 		  "bind": "/portainer/Files/AppData/Config/organizr",
