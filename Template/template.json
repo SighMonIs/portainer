@@ -48,7 +48,7 @@
       "ports": ["5055:5055/tcp"],
       "env": [
         {"default": "1000", "label": "PUID"},
-        {"default": "1000", "name": "PGID"}
+        {"default": "1000", "name": "PGID"},
         {"name": "TZ", "label": "TZ", "default": "Australia/Melbourne"}
       ],
       "volumes": [
