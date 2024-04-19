@@ -13,8 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xneo1/portainer_templates.git"
+    "url": "git+https://github.com/SighMonIs/portainer.git"
   },
-  "author": "xneo1",
+  "author": "SighMon",
   "license": "GPLv3"
 }
