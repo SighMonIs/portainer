@@ -1,3 +1,6 @@
+{
+  "version": "2",
+  "templates": [
 #	This is a template for creating new entries.
 #    {
 #     "name": "AppName", # This is the name given to the container itself
@@ -18,12 +21,6 @@
 #		}
 #	  ]
 #    },
-
-
-
-{
-  "version": "2",
-  "templates": [
     {
       "name": "Organizr2 - name",
 	  "title": "Organizr2 - title",
