@@ -280,8 +280,6 @@
       "env": [
         {"label": "Admin Username", "name": "POSTGRES_USER"},
         {"label": "Admin Password", "name": "POSTGRES_PASSWORD"},
-        {"defaults": "mealie", "label": "Mealie Database Name (default)", "name": "POSTGRES_DB"},
-        {"defaults": "wikijs", "label": "Wiki.JS Database Name (default)", "name": "POSTGRES_DB"}
       ],
       "volumes": [
         {"container": "/var/lib/postgresql/data"}
@@ -299,7 +297,7 @@
       "image": "dpage/pgadmin4",
       "ports": ["15432:80/tcp"],
       "env": [
-        {"label": "Admin Email Address", "name": "PGADMIN_DEFAULT_EMAIL"},
+        {"defaults": "simonreidis@gmail.com", "label": "Admin Email Address", "name": "PGADMIN_DEFAULT_EMAIL"},
         {"label": "Admin Password", "name": "PGADMIN_DEFAULT_PASSWORD"}
       ],
       "volumes": [
@@ -349,11 +347,11 @@
       "network": "bridge",
       "ports": ["3000:80/tcp"],
       "env": [
-        {"defaults": "postgres", "label": "DB_TYPE", "name": "DB_TYPE"},
-        {"defaults": "db", "label": "DB_HOST", "name": "DB_HOST"},
-        {"defaults": "5432", "label": "DB_PORT", "name": "DB_PORT"},
-        {"label": "Admin Username", "name": "DB_USER"},
-        {"label": "Admin Password", "name": "DB_PASS"},
+        {"defaults": "postgres", "label": "Database Type", "name": "DB_TYPE"},
+        {"defaults": "192.168.111.151", "label": "Database URL", "name": "DB_HOST"},
+        {"defaults": "5432", "label": "Database Port", "name": "DB_PORT"},
+        {"label": "Database Username", "name": "DB_USER"},
+        {"label": "Database Password", "name": "DB_PASS"},
         {"defaults": "wiki", "label": "Database Name: This database will need to be manually created", "name": "DB_NAME"}
       ],
       "volumes": [
