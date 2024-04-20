@@ -151,6 +151,26 @@
         {"bind": "/path/to/downloadclient-downloads", "container": "/app/temp_downloads"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Prowlarr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/prowlarr.png",
+      "description": "Indexer manager/proxy with integration with the various *arr apps.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Prowlarr",
+      "image": "lscr.io/linuxserver/prowlarr:latest",
+      "ports": ["9696:9696/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/config"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
