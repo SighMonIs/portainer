@@ -237,35 +237,6 @@
         {"bind": "/path/to/comics", "container": "/comics"}
       ],
       "restart_policy": "unless-stopped"
-    },
-    {
-      "categories": ["All"],
-      "title": "Plex",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/plex.png",
-      "description": "Media streaming server for movies, televisions shows, and music",
-      "type": 1,
-      "platform": "linux",
-      "name": "Plex",
-      "image": "lscr.io/linuxserver/plex:latest",
-      "ports": ["32400:32400/tcp"],
-      "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
-        {"defaults": "docker", "label": "VERSION", "name": "VERSION"},
-        {"defaults": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
-      ],
-      "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/anime", "container": "/anime"},
-        {"bind": "/path/to/tv", "container": "/tv"},
-        {"bind": "/path/to/movies", "container": "/movies"},
-        {"bind": "/path/to/movies", "container": "/music"},
-        {"bind": "/path/to/youtube", "container": "/youtube"},
-        {"bind": "/path/to/prawn", "container": "/prawn"},
-        {"bind": "/path/to/recycle", "container": "/recycle"}
-      ],
-      "restart_policy": "unless-stopped"
     }
   ]
 }
