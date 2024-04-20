@@ -324,9 +324,9 @@
         {"default": "1", "label": "WEB_CONCURRENCY", "name": "WEB_CONCURRENCY"},
         {"default": "http://192.168.111.151:9925", "label": "BASE_URL", "name": "BASE_URL"},
         {"default": "postgres", "label": "DB_ENGINE", "name": "DB_ENGINE"},
-        {"default": "mealie", "label": "POSTGRES_USER", "name": "POSTGRES_USER"},
+        {"default": "simonreidis.mealie@gmail.com", "label": "POSTGRES_USER", "name": "POSTGRES_USER"},
         {"default": "mealie", "label": "POSTGRES_PASSWORD", "name": "POSTGRES_PASSWORD"},
-        {"default": "postgres", "label": "POSTGRES_SERVER", "name": "POSTGRES_SERVER"},
+        {"default": "192.168.111.151", "label": "POSTGRES_SERVER", "name": "POSTGRES_SERVER"},
         {"default": "5432", "label": "POSTGRES_PORT", "name": "POSTGRES_PORT"},
         {"default": "mealie", "label": "POSTGRES_DB", "name": "POSTGRES_DB"}
       ],
