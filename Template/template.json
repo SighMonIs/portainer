@@ -59,7 +59,7 @@
         {"defaults": "1000", "label": "PUID", "name": "PUID"},
         {"defaults": "1000", "label": "PGID", "name": "PGID"},
         {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
-        {"defaults": "8080", "label": "WEBUI_PORT", "name": ""},
+        {"defaults": "8080", "label": "WEBUI_PORT", "name": "WEBUI_PORT"},
         {"defaults": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
       ],
       "volumes": [
