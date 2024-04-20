@@ -276,7 +276,7 @@
       "platform": "linux",
       "name": "PostgreSQL",
       "image": "postgres:latest",
-      "ports": ["5432/tcp"],
+      "ports": ["5432:5432/tcp"],
       "env": [
         {"name": "POSTGRES_USER", "label": "Superuser Username"},
         {"name": "POSTGRES_PASSWORD", "label": "Superuser Password"}
