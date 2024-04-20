@@ -359,6 +359,23 @@
         {"bind": "/path/to/config/data", "container": "/data"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "PinchFlat",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/pinchflat.png",
+      "description": "YouTube media downloads and management.",
+      "type": 1,
+      "platform": "linux",
+      "name": "PinchFlat",
+      "image": "keglin/pinchflat:latest",
+      "network": "bridge",
+      "ports": ["8945:8945/tcp"],
+      "volumes": [
+        {"bind": "/path/to/config", "container": "/config"},
+        {"bind": "/path/to/downloads", "container": "/downloads"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
