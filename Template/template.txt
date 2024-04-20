@@ -10,7 +10,7 @@
       "image": "",
       "ports": [":/tcp"],
       "env": [
-        {"defaults": "", "label": "", "name": ""},
+        {"label": "", "name": "", "defaults": ""},
       ],
       "volumes": [
         {"bind": "", "container": ""},

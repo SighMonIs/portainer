@@ -278,8 +278,10 @@
       "image": "postgres:latest",
       "ports": ["5432:5432/tcp"],
       "env": [
-        {"defaults": "Uncouple7368", "name": "POSTGRES_USER", "label": "Superuser Username"},
-        {"defaults": "g&TNo6CcB&@TqY", "name": "POSTGRES_PASSWORD", "label": "Superuser Password"}
+        {"label": "Admin Username", "name": "POSTGRES_USER"},
+        {"label": "Admin Password", "name": "POSTGRES_PASSWORD"},
+        {"defaults": "mealie", "label": "Mealie Database Name (default)", "name": "POSTGRES_DB"},
+        {"defaults": "wikijs", "label": "Wiki.JS Database Name (default)", "name": "POSTGRES_DB"}
       ],
       "volumes": [
         {"container": "/var/lib/postgresql/data"}
