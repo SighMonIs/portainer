@@ -2,7 +2,7 @@
   "version": "2",
   "templates": [
     {
-      "categories": ["Other", "Tools"],
+      "categories": ["All"],
       "title": "Organizr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/organizr.png",
       "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
@@ -22,7 +22,7 @@
       "restart_policy": "unless-stopped"
     },
     {
-      "categories": ["Tools"],
+      "categories": ["All"],
       "title": "Overseerr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
       "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
@@ -41,5 +41,32 @@
       ],
       "restart_policy": "unless-stopped"
     },
+        {
+      "categories": ["All"],
+      "title": "qBittorrent",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
+      "description": "The qBittorrent project aims to provide an open-source software alternative to \u00ef\u00bf\u00bdTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
+      "type": 1,
+      "platform": "linux",
+      "name": "qBittorrent",
+      "image": "lscr.io/linuxserver/qbittorrent:latest",
+      "ports": [
+        {"8080:8080/tcp"},
+        {"6881:6881/tcp"},
+        {"6881:6881/udp"}
+      ],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
+        {"defaults": "8080", "label": "WEBUI_PORT", "name": ""},
+        {"defaults": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/appdata/config", "container": "/config"},
+        {"bind": "/path/to/downloads", "container": "/downloads"}
+      ],
+      "restart_policy": "unless-stopped"
+    }
   ]
 }

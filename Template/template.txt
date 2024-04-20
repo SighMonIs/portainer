@@ -1,5 +1,5 @@
     {
-      "categories": [""],
+      "categories": ["All"],
       "title": "",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/.png",
       "description": "",
