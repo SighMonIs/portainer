@@ -279,7 +279,7 @@
       "ports": ["5432:5432/tcp"],
       "env": [
         {"label": "Admin Username", "name": "POSTGRES_USER"},
-        {"label": "Admin Password", "name": "POSTGRES_PASSWORD"},
+        {"label": "Admin Password", "name": "POSTGRES_PASSWORD"}
       ],
       "volumes": [
         {"container": "/var/lib/postgresql/data"}
