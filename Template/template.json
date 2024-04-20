@@ -63,6 +63,28 @@
         {"bind": "/path/to/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Sonarr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/sonarr.png",
+      "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
+      "ports": ["8989:8989/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/config"},
+        {"bind": "/path/to/tvseries", "container": "/tv"},
+        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
