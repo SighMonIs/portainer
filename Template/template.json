@@ -129,6 +129,28 @@
         {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Kapowarr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/kapowarr.png",
+      "description": "Kapowarr is a software to build and manage a comic book library, fitting in the *arr suite of software.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Kapowarr",
+      "image": "mrcas/kapowarr:latest",
+      "ports": ["5656:5656/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/app/db"},
+        {"bind": "/path/to/music", "container": "/comics"},
+        {"bind": "/path/to/downloadclient-downloads", "container": "/app/temp_downloads"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
