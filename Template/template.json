@@ -423,7 +423,7 @@
       "description": "The easiest way to run WireGuard VPN with a web-based admin UI.",
       "type": 1,
       "platform": "linux",
-      "name": "Wireguard Easy",
+      "name": "Wireguard-Easy",
       "image": "ghcr.io/wg-easy/wg-easy",
       "network": "bridge",
       "ports": ["51820:51820/udp","51821:51821/tcp"],
