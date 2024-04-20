@@ -344,13 +344,14 @@
       "platform": "linux",
       "name": "Wiki.JS",
       "image": "ghcr.io/requarks/wiki:2",
+      "network": "bridge",
       "ports": ["3000:80/tcp"],
       "env": [
         {"defaults": "postgres", "label": "DB_TYPE", "name": "DB_TYPE"},
         {"defaults": "db", "label": "DB_HOST", "name": "DB_HOST"},
         {"defaults": "5432", "label": "DB_PORT", "name": "DB_PORT"},
-        {"defaults": "wikijs", "label": "DB_USER", "name": "DB_USER"},
-        {"defaults": "wikijsrocks", "label": "DB_PASS", "name": "DB_PASS"},
+        {"label": "Admin Username", "name": "DB_USER"},
+        {"label": "Admin Password", "name": "DB_PASS"},
         {"defaults": "wiki", "label": "DB_NAME", "name": "DB_NAME"}
       ],
       "volumes": [
