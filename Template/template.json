@@ -347,12 +347,12 @@
       "network": "bridge",
       "ports": ["3000:80/tcp"],
       "env": [
-        {"defaults": "postgres", "label": "Database Type", "name": "DB_TYPE"},
-        {"defaults": "192.168.111.151", "label": "Database URL", "name": "DB_HOST"},
-        {"defaults": "5432", "label": "Database Port", "name": "DB_PORT"},
+        {"default": "postgres", "label": "Database Type", "name": "DB_TYPE"},
+        {"default": "192.168.111.151", "label": "Database URL", "name": "DB_HOST"},
+        {"default": "5432", "label": "Database Port", "name": "DB_PORT"},
         {"label": "Database Username", "name": "DB_USER"},
         {"label": "Database Password", "name": "DB_PASS"},
-        {"defaults": "wiki", "label": "Database Name: This database will need to be manually created", "name": "DB_NAME"}
+        {"default": "wiki", "label": "Database Name: This database will need to be manually created", "name": "DB_NAME"}
       ],
       "volumes": [
         {"bind": "/path/to/config", "container": "/config"},
