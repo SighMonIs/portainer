@@ -41,7 +41,7 @@
       ],
       "restart_policy": "unless-stopped"
     },
-        {
+    {
       "categories": ["All"],
       "title": "qBittorrent",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
