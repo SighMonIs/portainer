@@ -392,6 +392,29 @@
         {"bind": "/path/to/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "File Browser",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/filebrowser.png",
+      "description": "File managing interface for specified directories.",
+      "type": 1,
+      "platform": "linux",
+      "name": "FileBrowser",
+      "image": "filebrowser/filebrowser:s6",
+      "network": "bridge",
+      "ports": ["8080:80/tcp"],
+      "env": [
+        {"default": "1000", "label": "User ID", "name": "PUID"},
+        {"default": "1000", "label": "Group ID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/root", "container": "/srv"},
+        {"bind": "/path/to/filebrowser.db", "container": "/database/filebrowser.db"},
+        {"bind": "/path/to/settings.json", "container": "/config/settings.json"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
