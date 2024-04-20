@@ -12,7 +12,7 @@
       "image": "organizr/organizr:latest",
       "ports": ["9949:80/tcp"],
       "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"label": "PUID", "name": "PUID", "default": "1000"},
         {"default": "1000", "label": "PGID", "name": "PGID"},
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
