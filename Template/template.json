@@ -41,23 +41,5 @@
       ],
       "restart_policy": "unless-stopped"
     },
-    {
-      "categories": [""],
-      "title": "",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/.png",
-      "description": "",
-      "type": 1,
-      "platform": "linux",
-      "name": "",
-      "image": "",
-      "ports": [":/tcp"]
-      "env": [
-        {"defaults": "", "label": "", "name": ""}
-      ],
-      "volumes": [
-        {"bind": "", "container": ""}
-      ],
-      "restart_policy": "unless-stopped"
-    }
   ]
 }

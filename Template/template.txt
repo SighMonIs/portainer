@@ -1,15 +1,18 @@
-{
-  "categories": ["All"],
-  "name": "AppName",
-  "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/AppName.png",
-  "description": "Description for AppName",
-  "platform": "linux",
-  "title": "AppName",
-  "stackfile": "Template/Stack/organizr.yml",
-  "url": "https://github.com/SighMonIs/portainer"  
-  "type": 1,
-  "repository": {
-    "stackfile": "Template/Stack/bazarr.yml",
-	"url": "https://github.com/SighMonIs/portainer"
-   }
-},
+    {
+      "categories": [""],
+      "title": "",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/.png",
+      "description": "",
+      "type": 1,
+      "platform": "linux",
+      "name": "",
+      "image": "",
+      "ports": [":/tcp"]
+      "env": [
+        {"defaults": "", "label": "", "name": ""}
+      ],
+      "volumes": [
+        {"bind": "", "container": ""}
+      ],
+      "restart_policy": "unless-stopped"
+    }
