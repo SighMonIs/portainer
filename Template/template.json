@@ -12,27 +12,12 @@
       "image": "organizr/organizr:latest",
       "ports": ["9949:80/tcp"],
       "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "label": "TZ",
-          "name": "TZ",
-          "default": "Australia/Melbourne"
-        }
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/organizr",
-          "container": "/config"
-        }
+        {"bind": "/portainer/Files/AppData/Config/organizr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -47,12 +32,30 @@
       "image": "lscr.io/linuxserver/overseerr:latest",
       "ports": ["5055:5055/tcp"],
       "env": [
-        {"default": "1000", "label": "PUID"},
-        {"default": "1000", "name": "PGID"},
-        {"name": "TZ", "label": "TZ", "default": "Australia/Melbourne"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "name": "TZ", "label": "TZ"}
       ],
       "volumes": [
         {"bind": "/portainer/Files/AppData/Config/overseerr", "container": "/config"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": [""],
+      "title": "",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/.png",
+      "description": "",
+      "type": 1,
+      "platform": "linux",
+      "name": "",
+      "image": "",
+      "ports": [":/tcp"]
+      "env": [
+        {"defaults": "", "label": "", "name": ""}
+      ],
+      "volumes": [
+        {"bind": "", "container": ""}
       ],
       "restart_policy": "unless-stopped"
     }
