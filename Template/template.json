@@ -266,24 +266,6 @@
         {"bind": "/path/to/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
-    },
-    {
-      "categories": ["All"],
-      "title": "PostgreSQL",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
-      "description": "The most advanced open-source database",
-      "type": 1,
-      "platform": "linux",
-      "name": "PostgreSQL",
-      "image": "postgres:latest",
-      "ports": ["5432/tcp"],
-      "env": [
-        {"name": "POSTGRES_USER", "label": "Superuser"},
-        {"name": "POSTGRES_PASSWORD", "label": "Superuser password"}
-      ],
-      "volumes": [
-        {"container": "/var/lib/postgresql/data"}
-      ]
     }
   ]
 }
