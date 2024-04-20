@@ -40,6 +40,29 @@
         {"bind": "/portainer/Files/AppData/Config/overseerr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "qBittorrent",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
+      "description": "The qBittorrent project aims to provide an open-source software alternative to Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
+      "type": 1,
+      "platform": "linux",
+      "name": "qBittorrent",
+      "image": "lscr.io/linuxserver/qbittorrent:latest",
+      "ports": ["8080:8080/tcp", "6881:6881/tcp", "6881:6881/udp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
+        {"defaults": "8080", "label": "WEBUI_PORT", "name": "WEBUI_PORT"},
+        {"defaults": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/appdata/config", "container": "/config"},
+        {"bind": "/path/to/downloads", "container": "/downloads"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
