@@ -82,7 +82,8 @@
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
         {"bind": "/path/to/tvseries", "container": "/tv"},
-        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
+        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"},
+        {"bind": "/path/to/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -105,6 +106,7 @@
         {"bind": "/path/to/data", "container": "/config"},
         {"bind": "/path/to/movies", "container": "/movies"},
         {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
+        {"bind": "/path/to/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -127,6 +129,7 @@
         {"bind": "/path/to/data", "container": "/config"},
         {"bind": "/path/to/music", "container": "/music"},
         {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
+        {"bind": "/path/to/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -171,6 +174,116 @@
         {"bind": "/path/to/data", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Maintainerr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/maintainerr.png",
+      "description": "Monitor and remove unwatched Plex media.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Maintainerr",
+      "image": "jorenn92/maintainerr:latest",
+      "ports": ["8154:80/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/opt/data"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Bazarr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/bazarr.png",
+      "description": "Subtitle downloader for your media files.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Bazarr",
+      "image": "lscr.io/linuxserver/bazarr:latest",
+      "ports": ["6767:6767/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/config"},
+        {"bind": "/path/to/movies", "container": "/movies"},
+        {"bind": "/path/to/tv", "container": "/tv"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Komga",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/komga.png",
+      "description": "Media server for comics, manga, magazines, and books with API and OPDS support",
+      "type": 1,
+      "platform": "linux",
+      "name": "Komga",
+      "image": "gotson/komga",
+      "ports": ["25600:25600/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/config"},
+        {"bind": "/path/to/comics", "container": "/comics"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Plex",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/plex.png",
+      "description": "Media streaming server for movies, televisions shows, and music",
+      "type": 1,
+      "platform": "linux",
+      "name": "Plex",
+      "image": "lscr.io/linuxserver/plex:latest",
+      "ports": ["32400:32400/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
+        {"defaults": "docker", "label": "VERSION", "name": "VERSION"},
+        {"defaults": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/config"},
+        {"bind": "/path/to/anime", "container": "/anime"},
+        {"bind": "/path/to/tv", "container": "/tv"},
+        {"bind": "/path/to/movies", "container": "/movies"},
+        {"bind": "/path/to/movies", "container": "/music"},
+        {"bind": "/path/to/youtube", "container": "/youtube"},
+        {"bind": "/path/to/prawn", "container": "/prawn"},
+        {"bind": "/path/to/recycle", "container": "/recycle"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "PostgreSQL",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+      "description": "The most advanced open-source database",
+      "type": 1,
+      "platform": "linux",
+      "name": "PostgreSQL",
+      "image": "postgres:latest",
+      "ports": ["5432/tcp"],
+      "env": [
+        {"name": "POSTGRES_USER", "label": "Superuser"},
+        {"name": "POSTGRES_PASSWORD", "label": "Superuser password"}
+      ],
+      "volumes": [
+        {"container": "/var/lib/postgresql/data"}
+      ]
     }
   ]
 }
