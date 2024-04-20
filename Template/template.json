@@ -278,8 +278,8 @@
       "image": "postgres:latest",
       "ports": ["5432/tcp"],
       "env": [
-        {"name": "POSTGRES_USER", "label": "Superuser"},
-        {"name": "POSTGRES_PASSWORD", "label": "Superuser password"}
+        {"name": "POSTGRES_USER", "label": "Superuser Username"},
+        {"name": "POSTGRES_PASSWORD", "label": "Superuser Password"}
       ],
       "volumes": [
         {"container": "/var/lib/postgresql/data"}
