@@ -376,6 +376,22 @@
         {"bind": "/path/to/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "MeTube",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/metube.png",
+      "description": "Web UI for YouTube-DL",
+      "type": 1,
+      "platform": "linux",
+      "name": "MeTube",
+      "image": "ghcr.io/alexta69/metube",
+      "network": "bridge",
+      "ports": ["8081:8081/tcp"],
+      "volumes": [
+        {"bind": "/path/to/downloads", "container": "/downloads"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
