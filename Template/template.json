@@ -270,7 +270,7 @@
     {
       "categories": ["All"],
       "title": "PostgreSQL",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/postgresql.png",
       "description": "The most advanced open-source database",
       "type": 1,
       "platform": "linux",
