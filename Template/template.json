@@ -283,7 +283,38 @@
       ],
       "volumes": [
         {"container": "/var/lib/postgresql/data"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    }
+      "categories": ["All"],
+      "title": "Mealie",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/mealie.png",
+      "description": "Recipe manager",
+      "type": 1,
+      "platform": "linux",
+      "name": "Mealie",
+      "image": "ghcr.io/mealie-recipes/mealie:v1.5.1",
+      "ports": ["9925:9000/tcp"],
+      "env": [
+        {"default": "true", "label": "ALLOW_SIGNUP", "name": "ALLOW_SIGNUP"},
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
+        {"default": "1", "label": "MAX_WORKERS", "name": "MAX_WORKERS"},
+        {"default": "1", "label": "WEB_CONCURRENCY", "name": "WEB_CONCURRENCY"},
+        {"default": "http://192.168.111.151:9925", "label": "BASE_URL", "name": "BASE_URL"},
+        {"default": "postgres", "label": "DB_ENGINE", "name": "DB_ENGINE"},
+        {"default": "mealie", "label": "POSTGRES_USER", "name": "POSTGRES_USER"},
+        {"default": "mealie", "label": "POSTGRES_PASSWORD", "name": "POSTGRES_PASSWORD"},
+        {"default": "postgres", "label": "POSTGRES_SERVER", "name": "POSTGRES_SERVER"},
+        {"default": "5432", "label": "POSTGRES_PORT", "name": "POSTGRES_PORT"},
+        {"default": "mealie", "label": "POSTGRES_DB", "name": "POSTGRES_DB"}
       ]
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/app/data"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
