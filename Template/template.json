@@ -310,7 +310,7 @@
         {"default": "postgres", "label": "POSTGRES_SERVER", "name": "POSTGRES_SERVER"},
         {"default": "5432", "label": "POSTGRES_PORT", "name": "POSTGRES_PORT"},
         {"default": "mealie", "label": "POSTGRES_DB", "name": "POSTGRES_DB"}
-      ]
+      ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/app/data"}
       ],
