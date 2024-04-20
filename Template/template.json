@@ -288,6 +288,25 @@
     },
     {
       "categories": ["All"],
+      "title": "pgAdmin",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/pgadmin.png",
+      "description": "PGAdmin is a web-based GUI tool used to interact with the Postgres database sessions, both locally and remote servers as well. You can use PGAdmin to perform any sort of database administration required for a Postgres database.",
+      "type": 1,
+      "platform": "linux",
+      "name": "pgAdmin",
+      "image": "dpage/pgadmin4",
+      "ports": ["15432:80/tcp"],
+      "env": [
+        {"label": "Admin Email Address", "name": "PGADMIN_DEFAULT_EMAIL"},
+        {"label": "Admin Password", "name": "PGADMIN_DEFAULT_PASSWORD"}
+      ],
+      "volumes": [
+        {"container": "/var/lib/pgadmin/data"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
       "title": "Mealie",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/mealie.png",
       "description": "Recipe manager",
