@@ -321,14 +321,14 @@
         {"default": "postgres", "label": "Database Engine", "name": "DB_ENGINE"},
         {"default": "192.168.111.151", "label": "Database Server IP", "name": "POSTGRES_SERVER"},
         {"default": "5432", "label": "Database Port", "name": "POSTGRES_PORT"},
-        {"default": "mealie", "label": "Database Name: This database will need to be manually created", "name": "POSTGRES_DB"}
+        {"default": "mealie", "label": "Database Name: This database will need to be manually created", "name": "POSTGRES_DB"},
         {"default": "http://192.168.111.151:9925", "label": "Mealie URL", "name": "BASE_URL"},
         {"default": "true", "label": "Allow User Signup", "name": "ALLOW_SIGNUP"},
         {"default": "1000", "label": "User ID", "name": "PUID"},
         {"default": "1000", "label": "Group ID", "name": "PGID"},
         {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"},
         {"default": "1", "label": "MAX_WORKERS", "name": "MAX_WORKERS"},
-        {"default": "1", "label": "WEB_CONCURRENCY", "name": "WEB_CONCURRENCY"},
+        {"default": "1", "label": "WEB_CONCURRENCY", "name": "WEB_CONCURRENCY"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/app/data"}
