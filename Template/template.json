@@ -286,7 +286,7 @@
       ],
       "restart_policy": "unless-stopped"
     },
-    }
+    {
       "categories": ["All"],
       "title": "Mealie",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/mealie.png",
