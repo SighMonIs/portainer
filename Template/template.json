@@ -103,7 +103,29 @@
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/movies", "container": "/tv"},
+        {"bind": "/path/to/movies", "container": "/movies"},
+        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": ["All"],
+      "title": "Lidarr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/lidarr.png",
+      "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Lidarr",
+      "image": "lscr.io/linuxserver/lidarr:latest",
+      "ports": ["8686:8686/tcp"],
+      "env": [
+        {"defaults": "1000", "label": "PUID", "name": "PUID"},
+        {"defaults": "1000", "label": "PGID", "name": "PGID"},
+        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/path/to/data", "container": "/config"},
+        {"bind": "/path/to/music", "container": "/music"},
         {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
