@@ -52,11 +52,11 @@
       "image": "lscr.io/linuxserver/qbittorrent:latest",
       "ports": ["8080:8080/tcp", "6881:6881/tcp", "6881:6881/udp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
-        {"defaults": "8080", "label": "WEBUI_PORT", "name": "WEBUI_PORT"},
-        {"defaults": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
+        {"default": "8080", "label": "WEBUI_PORT", "name": "WEBUI_PORT"},
+        {"default": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
       ],
       "volumes": [
         {"bind": "/path/to/appdata/config", "container": "/config"},
@@ -75,9 +75,9 @@
       "image": "lscr.io/linuxserver/sonarr:latest",
       "ports": ["8989:8989/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
@@ -98,9 +98,9 @@
       "image": "lscr.io/linuxserver/radarr:latest",
       "ports": ["7878:7878/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
@@ -121,9 +121,9 @@
       "image": "lscr.io/linuxserver/lidarr:latest",
       "ports": ["8686:8686/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
@@ -144,9 +144,9 @@
       "image": "mrcas/kapowarr:latest",
       "ports": ["5656:5656/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/app/db"},
@@ -166,9 +166,9 @@
       "image": "lscr.io/linuxserver/prowlarr:latest",
       "ports": ["9696:9696/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"}
@@ -186,9 +186,9 @@
       "image": "jorenn92/maintainerr:latest",
       "ports": ["8154:80/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/opt/data"}
@@ -206,9 +206,9 @@
       "image": "lscr.io/linuxserver/bazarr:latest",
       "ports": ["6767:6767/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
@@ -228,9 +228,9 @@
       "image": "gotson/komga",
       "ports": ["25600:25600/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
@@ -249,11 +249,11 @@
       "image": "lscr.io/linuxserver/plex:latest",
       "ports": ["32400:32400/tcp"],
       "env": [
-        {"defaults": "1000", "label": "PUID", "name": "PUID"},
-        {"defaults": "1000", "label": "PGID", "name": "PGID"},
-        {"defaults": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
-        {"defaults": "docker", "label": "VERSION", "name": "VERSION"},
-        {"defaults": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
+        {"default": "docker", "label": "VERSION", "name": "VERSION"},
+        {"default": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
       ],
       "volumes": [
         {"bind": "/path/to/data", "container": "/config"},
@@ -297,7 +297,7 @@
       "image": "dpage/pgadmin4",
       "ports": ["15432:80/tcp"],
       "env": [
-        {"defaults": "simonreidis@gmail.com", "label": "Admin Email Address", "name": "PGADMIN_DEFAULT_EMAIL"},
+        {"default": "simonreidis@gmail.com", "label": "Admin Email Address", "name": "PGADMIN_DEFAULT_EMAIL"},
         {"label": "Admin Password", "name": "PGADMIN_DEFAULT_PASSWORD"}
       ],
       "volumes": [
