@@ -17,7 +17,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/portainer/Files/AppData/Config/organizr", "container": "/config"}
+        {"bind": "/home/gary/dockerdata/organizr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -37,7 +37,7 @@
         {"default": "Australia/Melbourne", "name": "TZ", "label": "TZ"}
       ],
       "volumes": [
-        {"bind": "/portainer/Files/AppData/Config/overseerr", "container": "/config"}
+        {"bind": "/home/gary/dockerdata/overseerr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -59,8 +59,8 @@
         {"default": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
       ],
       "volumes": [
-        {"bind": "/path/to/appdata/config", "container": "/config"},
-        {"bind": "/path/to/downloads", "container": "/downloads"}
+        {"bind": "/home/gary/dockerdata/qbittorrent", "container": "/config"},
+        {"bind": "truenas/TrueMedia/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -80,10 +80,11 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/tvseries", "container": "/tv"},
-        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"},
-        {"bind": "/path/to/recycle", "container": "/recycle"}
+        {"bind": "/home/gary/dockerdata/sonarr", "container": "/config"},
+        {"bind": "/truenas/TrueMedia/tv", "container": "/tv"},
+		{"bind": "/truenas/TrueMedia/anime", "container": "/anime"},
+        {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
+        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -103,10 +104,10 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/movies", "container": "/movies"},
-        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"},
-        {"bind": "/path/to/recycle", "container": "/recycle"}
+        {"bind": "/home/gary/dockerdata/radarr", "container": "/config"},
+        {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
+        {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
+        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -126,10 +127,10 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/music", "container": "/music"},
-        {"bind": "/path/to/downloadclient-downloads", "container": "/downloads"},
-        {"bind": "/path/to/recycle", "container": "/recycle"}
+        {"bind": "/home/gary/dockerdata/lidarr", "container": "/config"},
+        {"bind": "/truenas/TrueMedia/music", "container": "/music"},
+        {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
+        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -149,9 +150,9 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/app/db"},
-        {"bind": "/path/to/music", "container": "/comics"},
-        {"bind": "/path/to/downloadclient-downloads", "container": "/app/temp_downloads"}
+        {"bind": "/home/gary/dockerdata/kapowarr", "container": "/app/db"},
+        {"bind": "/truenas/TrueMedia/comics", "container": "/comics"},
+        {"bind": "/truenas/TrueMedia/downloads", "container": "/app/temp_downloads"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -171,7 +172,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"}
+        {"bind": "/home/gary/dockerdata/prowlarr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -191,7 +192,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/opt/data"}
+        {"bind": "/home/gary/dockerdata/maintainerr", "container": "/opt/data"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -211,9 +212,9 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/movies", "container": "/movies"},
-        {"bind": "/path/to/tv", "container": "/tv"}
+        {"bind": "/home/gary/dockerdata/bazarr", "container": "/config"},
+        {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
+        {"bind": "/truenas/TrueMedia/tv", "container": "/tv"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -233,8 +234,8 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/comics", "container": "/comics"}
+        {"bind": "/home/gary/dockerdata/komga", "container": "/config"},
+        {"bind": "/truenas/TrueMedia/comics", "container": "/comics"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -256,14 +257,14 @@
         {"default": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/config"},
-        {"bind": "/path/to/anime", "container": "/anime"},
-        {"bind": "/path/to/tv", "container": "/tv"},
-        {"bind": "/path/to/movies", "container": "/movies"},
-        {"bind": "/path/to/movies", "container": "/music"},
-        {"bind": "/path/to/youtube", "container": "/youtube"},
-        {"bind": "/path/to/prawn", "container": "/prawn"},
-        {"bind": "/path/to/recycle", "container": "/recycle"}
+        {"bind": "/home/gary/dockerdata/plex", "container": "/config"},
+        {"bind": "/truenas/TrueMedia/anime", "container": "/anime"},
+        {"bind": "/truenas/TrueMedia/tv", "container": "/tv"},
+        {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
+        {"bind": "/truenas/TrueMedia/music", "container": "/music"},
+        {"bind": "/truenas/TrueMedia/youtube", "container": "/youtube"},
+        {"bind": "/truenas/TrueMedia/prawn", "container": "/prawn"},
+        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -331,7 +332,7 @@
         {"default": "1", "label": "WEB_CONCURRENCY", "name": "WEB_CONCURRENCY"}
       ],
       "volumes": [
-        {"bind": "/path/to/data", "container": "/app/data"}
+        {"bind": "/home/gary/dockerdata/mealie", "container": "/app/data"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -355,8 +356,8 @@
         {"default": "wiki", "label": "Database Name: This database will need to be manually created", "name": "DB_NAME"}
       ],
       "volumes": [
-        {"bind": "/path/to/config", "container": "/config"},
-        {"bind": "/path/to/config/data", "container": "/data"}
+        {"bind": "/home/gary/dockerdata/wikijs", "container": "/config"},
+        {"bind": "/home/gary/dockerdata/wikijs", "container": "/data"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -372,8 +373,8 @@
       "network": "bridge",
       "ports": ["8945:8945/tcp"],
       "volumes": [
-        {"bind": "/path/to/config", "container": "/config"},
-        {"bind": "/path/to/downloads", "container": "/downloads"}
+        {"bind": "/home/gary/dockerdata/pinchflat", "container": "/config"},
+        {"bind": "/home/gary/dockerdata/youtube", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -389,7 +390,7 @@
       "network": "bridge",
       "ports": ["8081:8081/tcp"],
       "volumes": [
-        {"bind": "/path/to/downloads", "container": "/downloads"}
+        {"bind": "/home/gary/dockerdata/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -410,9 +411,9 @@
         {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/path/to/root", "container": "/srv"},
-        {"bind": "/path/to/filebrowser.db", "container": "/database/filebrowser.db"},
-        {"bind": "/path/to/settings.json", "container": "/config/settings.json"}
+        {"bind": "/home/gary/dockerdata/", "container": "/srv"},
+        {"bind": "/home/gary/dockerdata/filebrowser", "container": "/database/filebrowser.db"},
+        {"bind": "/home/gary/dockerdata/filebrowser", "container": "/config/settings.json"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -440,7 +441,7 @@
         {"default": "0.0.0..0/0, ::/0", "label": "Allowed IP Addresses", "name": "WG_ALLOWED_IPS"}
       ],
       "volumes": [
-        {"bind": "/path/to/config", "container": "/etc/wireguard"}
+        {"bind": "/home/gary/dockerdata/wg-easy", "container": "/etc/wireguard"}
       ],
       "cap_add": ["NET_ADMIN", "SYS_MODULE"],
       "sysctls": ["net.ipv4.ip_forward=1", "net.ipv4.conf.all.src_valid_mark=1"],
