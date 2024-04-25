@@ -12,13 +12,7 @@
 	    "stackfile": "Template/Stack/overseerr.yml",
 	    "url": "https://github.com/SighMonIs/portainer"
       },  
-      "type": 2,
-	  "volumes": [
-		{
-		  "bind": "/portainer/Files/AppData/Config/organizr",
-		  "container": "/config"
-		}
-	  ]
-    }
+      "type": "container",
+    },
   ]
 }
