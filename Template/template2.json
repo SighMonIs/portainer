@@ -2,17 +2,17 @@
   "version": "2",
   "templates": [
     {
-      "name": "Overseerr",
-	  "title": "Overseerr",
-	  "description": "This is a test for just linking to compose files.", 
+      "title": "Overseerr",
+	  "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
+	  "description": "This is a test for just linking to compose files.",
 	  "categories": ["All"],
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
-      "platform": "linux",
-      "repository": {
-	    "stackfile": "Template/Stack/overseerr.yml",
+	  "platform": "linux",
+	  "type": "container",
+	  "repository": {
+	    "stackfile": "Template/Stack/overseerr.yaml",
 	    "url": "https://github.com/SighMonIs/portainer"
-      },  
-      "type": "container",
+      },
+	  "name": "Overseerr"
     }
   ]
 }
