@@ -13,3 +13,4 @@ services:
     ports:
       - 5055:5055
     restart: unless-stopped
+		network: bridge
