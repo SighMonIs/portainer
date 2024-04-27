@@ -25,6 +25,7 @@
       "repository": {
         "stackfile": "Template/Stack/qbittorrent.yaml",
         "url": "https://github.com/SighMonIs/portainer"
+      }
     }
   ]
 }
