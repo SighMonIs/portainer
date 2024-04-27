@@ -9,8 +9,8 @@
       "type": "stack",
       "platform": "linux",
       "repository": {
-        "stackfile": "/Template/Stack/overseerr.yaml",
-        "url": "https://github.com/SighMonIs/portainer/main"
+        "stackfile": "Template/Stack/overseerr.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
       }
     }
   ]
