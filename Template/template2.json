@@ -6,8 +6,12 @@
       "title": "Overseerr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
       "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
-      "type": 1,
-      "platform": "linux"
+      "type": "stack",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "overseerr.yaml",
+        "url": "https://github.com/SighMonIs/portainer/Template/Stack/"
+      }
     }
   ]
 }
