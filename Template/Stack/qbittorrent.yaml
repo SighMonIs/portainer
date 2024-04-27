@@ -1,0 +1,26 @@
+volumes:
+  media-downloads:
+    name: media-downloads
+    driver_opts:
+      type: nfs
+      o: addr=192.168.111.111
+      device: :/mnt/data/media/downloads
+
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - /docker/qbittorrent:/config
+      - media-downloads:/downloads
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped

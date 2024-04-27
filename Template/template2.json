@@ -13,6 +13,18 @@
         "stackfile": "Template/Stack/overseerr.yaml",
         "url": "https://github.com/SighMonIs/portainer"
       }
+    },
+    {
+      "categories": ["All"],
+      "title": "qBittorrent",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
+      "description": "The qBittorrent project aims to provide an open-source software alternative to Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
+      "type": 3,
+      "platform": "linux",
+      "name": "qBittorrent",
+      "repository": {
+        "stackfile": "Template/Stack/qbittorrent.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
     }
   ]
 }
