@@ -10,12 +10,7 @@
       "platform": "linux",
       "name": "Overseerr",
       "image": "lscr.io/linuxserver/overseerr:latest",
-      "ports": ["5055:5055/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "name": "TZ", "label": "TZ"}
-      ]
+      "ports": ["5055:5055/tcp"]
     }
   ]
 }
