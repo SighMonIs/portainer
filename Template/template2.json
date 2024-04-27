@@ -18,8 +18,7 @@
       ],
       "volumes": [
         {"bind": "/home/gary/dockerdata/overseerr", "container": "/config"}
-      ],
-      "restart_policy": "unless-stopped"
+      ]
     }
   ]
 }
