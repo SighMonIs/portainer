@@ -9,8 +9,7 @@
       "type": 1,
       "platform": "linux",
       "name": "Overseerr",
-      "image": "lscr.io/linuxserver/overseerr:latest",
-      "ports": ["5055:5055/tcp"]
+      "image": "lscr.io/linuxserver/overseerr:latest"
     }
   ]
 }
