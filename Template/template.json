@@ -17,7 +17,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/organizr", "container": "/config"}
+        {"bind": "/docker/organizr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -37,7 +37,7 @@
         {"default": "Australia/Melbourne", "name": "TZ", "label": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/overseerr", "container": "/config"}
+        {"bind": "/docker/overseerr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -59,7 +59,7 @@
         {"default": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/qbittorrent", "container": "/config"},
+        {"bind": "/docker/qbittorrent", "container": "/config"},
         {"bind": "truenas/TrueMedia/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
@@ -80,7 +80,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/sonarr", "container": "/config"},
+        {"bind": "/docker/sonarr", "container": "/config"},
         {"bind": "/truenas/TrueMedia/tv", "container": "/tv"},
 		{"bind": "/truenas/TrueMedia/anime", "container": "/anime"},
         {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
@@ -104,7 +104,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/radarr", "container": "/config"},
+        {"bind": "/docker/radarr", "container": "/config"},
         {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
         {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
         {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
@@ -127,7 +127,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/lidarr", "container": "/config"},
+        {"bind": "/docker/lidarr", "container": "/config"},
         {"bind": "/truenas/TrueMedia/music", "container": "/music"},
         {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
         {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
@@ -150,7 +150,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/kapowarr", "container": "/app/db"},
+        {"bind": "/docker/kapowarr", "container": "/app/db"},
         {"bind": "/truenas/TrueMedia/comics", "container": "/comics"},
         {"bind": "/truenas/TrueMedia/downloads", "container": "/app/temp_downloads"}
       ],
@@ -172,7 +172,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/prowlarr", "container": "/config"}
+        {"bind": "/docker/prowlarr", "container": "/config"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -192,7 +192,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/maintainerr", "container": "/opt/data"}
+        {"bind": "/docker/maintainerr", "container": "/opt/data"}
       ],
 	  "user": "1000:1000",
       "restart_policy": "unless-stopped"
@@ -213,7 +213,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/bazarr", "container": "/config"},
+        {"bind": "/docker/bazarr", "container": "/config"},
         {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
         {"bind": "/truenas/TrueMedia/tv", "container": "/tv"}
       ],
@@ -235,7 +235,7 @@
         {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/komga", "container": "/config"},
+        {"bind": "/docker/komga", "container": "/config"},
         {"bind": "/truenas/TrueMedia/comics", "container": "/comics"}
       ],
       "restart_policy": "unless-stopped"
@@ -258,7 +258,7 @@
         {"default": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/plex", "container": "/config"},
+        {"bind": "/docker/plex", "container": "/config"},
         {"bind": "/truenas/TrueMedia/anime", "container": "/anime"},
         {"bind": "/truenas/TrueMedia/tv", "container": "/tv"},
         {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
@@ -334,7 +334,7 @@
 	  "image": "ghcr.io/mealie-recipes/mealie:v1.5.1",
       "ports": ["9925:9000/tcp"],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/mealie", "container": "/app/data"}
+        {"bind": "/docker/mealie", "container": "/app/data"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -358,8 +358,8 @@
         {"label": "Database Name: This database will need to be manually created", "name": "DB_NAME", "default": "wiki"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/wikijs", "container": "/config"},
-		{"bind": "/home/gary/dockerdata/wikijs", "container": "/wiki/data/content"}
+        {"bind": "/docker/wikijs", "container": "/config"},
+		{"bind": "/docker/wikijs", "container": "/wiki/data/content"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -375,8 +375,8 @@
       "network": "bridge",
       "ports": ["8945:8945/tcp"],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/pinchflat", "container": "/config"},
-        {"bind": "/home/gary/dockerdata/youtube", "container": "/downloads"}
+        {"bind": "/docker/pinchflat", "container": "/config"},
+        {"bind": "/docker/youtube", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -392,7 +392,7 @@
       "network": "bridge",
       "ports": ["8081:8081/tcp"],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/downloads", "container": "/downloads"}
+        {"bind": "/docker/downloads", "container": "/downloads"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -413,9 +413,9 @@
         {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/", "container": "/srv"},
-        {"bind": "/home/gary/dockerdata/filebrowser", "container": "/database/filebrowser.db"},
-        {"bind": "/home/gary/dockerdata/filebrowser", "container": "/config/settings.json"}
+        {"bind": "/docker/", "container": "/srv"},
+        {"bind": "/docker/filebrowser", "container": "/database/filebrowser.db"},
+        {"bind": "/docker/filebrowser", "container": "/config/settings.json"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -443,7 +443,7 @@
         {"default": "0.0.0..0/0, ::/0", "label": "Allowed IP Addresses", "name": "WG_ALLOWED_IPS"}
       ],
       "volumes": [
-        {"bind": "/home/gary/dockerdata/wg-easy", "container": "/etc/wireguard"}
+        {"bind": "/docker/wg-easy", "container": "/etc/wireguard"}
       ],
       "cap_add": ["NET_ADMIN", "SYS_MODULE"],
       "sysctls": ["net.ipv4.ip_forward=1", "net.ipv4.conf.all.src_valid_mark=1"],
