@@ -8,7 +8,6 @@
       "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
       "type": 1,
       "platform": "linux",
-      "name": "Overseerr"
     }
   ]
 }
