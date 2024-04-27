@@ -2,17 +2,24 @@
   "version": "2",
   "templates": [
     {
+      "categories": ["All"],
       "title": "Overseerr",
-	  "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
-	  "description": "This is a test for just linking to compose files.",
-	  "categories": ["All"],
-	  "platform": "linux",
-	  "type": "container",
-	  "repository": {
-	    "stackfile": "Template/Stack/overseerr.yaml",
-	    "url": "https://github.com/SighMonIs/portainer"
-      },
-	  "name": "Overseerr"
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/overseerr.png",
+      "description": "Overseerr is a free and open source software application for managing requests for your media library.", 
+      "type": 1,
+      "platform": "linux",
+      "name": "Overseerr",
+      "image": "lscr.io/linuxserver/overseerr:latest",
+      "ports": ["5055:5055/tcp"],
+      "env": [
+        {"default": "1000", "label": "PUID", "name": "PUID"},
+        {"default": "1000", "label": "PGID", "name": "PGID"},
+        {"default": "Australia/Melbourne", "name": "TZ", "label": "TZ"}
+      ],
+      "volumes": [
+        {"bind": "/home/gary/dockerdata/overseerr", "container": "/config"}
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
