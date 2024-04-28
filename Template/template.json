@@ -46,115 +46,65 @@
       "title": "qBittorrent",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
       "description": "The qBittorrent project aims to provide an open-source software alternative to Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "qBittorrent",
-      "image": "lscr.io/linuxserver/qbittorrent:latest",
-      "ports": ["8080:8080/tcp", "6881:6881/tcp", "6881:6881/udp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
-        {"default": "8080", "label": "WEBUI_PORT", "name": "WEBUI_PORT"},
-        {"default": "6881", "label": "TORRENTING_PORT", "name": "TORRENTING_PORT"}
-      ],
-      "volumes": [
-        {"bind": "/docker/qbittorrent", "container": "/config"},
-        {"bind": "truenas/TrueMedia/downloads", "container": "/downloads"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/qbittorrent.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "Sonarr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/sonarr.png",
       "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
-      "ports": ["8989:8989/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/sonarr", "container": "/config"},
-        {"bind": "/truenas/TrueMedia/tv", "container": "/tv"},
-		{"bind": "/truenas/TrueMedia/anime", "container": "/anime"},
-        {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
-        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/sonarr.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "Radarr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/radarr.png",
       "description": "Radarr - A fork of Sonarr to work with movies la Couchpotato",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
-      "ports": ["7878:7878/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/radarr", "container": "/config"},
-        {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
-        {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
-        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/radarr.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "Lidarr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/lidarr.png",
       "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Lidarr",
-      "image": "lscr.io/linuxserver/lidarr:latest",
-      "ports": ["8686:8686/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/lidarr", "container": "/config"},
-        {"bind": "/truenas/TrueMedia/music", "container": "/music"},
-        {"bind": "/truenas/TrueMedia/downloads", "container": "/downloads"},
-        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/lidarr.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "Kapowarr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/kapowarr.png",
       "description": "Kapowarr is a software to build and manage a comic book library, fitting in the *arr suite of software.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Kapowarr",
-      "image": "mrcas/kapowarr:latest",
-      "ports": ["5656:5656/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/kapowarr", "container": "/app/db"},
-        {"bind": "/truenas/TrueMedia/comics", "container": "/comics"},
-        {"bind": "/truenas/TrueMedia/downloads", "container": "/app/temp_downloads"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/kapowarr.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
@@ -194,7 +144,7 @@
       "volumes": [
         {"bind": "/docker/maintainerr", "container": "/opt/data"}
       ],
-	  "user": "1000:1000",
+      "user": "1000:1000",
       "restart_policy": "unless-stopped"
     },
     {
@@ -202,72 +152,42 @@
       "title": "Bazarr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/bazarr.png",
       "description": "Subtitle downloader for your media files.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Bazarr",
-      "image": "lscr.io/linuxserver/bazarr:latest",
-      "ports": ["6767:6767/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/bazarr", "container": "/config"},
-        {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
-        {"bind": "/truenas/TrueMedia/tv", "container": "/tv"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/bazarr.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "Komga",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/komga.png",
       "description": "Media server for comics, manga, magazines, and books with API and OPDS support",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Komga",
-      "image": "gotson/komga",
-      "ports": ["25600:25600/tcp"],
-      "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/komga", "container": "/config"},
-        {"bind": "/truenas/TrueMedia/comics", "container": "/comics"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/komga.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "Plex",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/plex.png",
       "description": "Media streaming server for movies, televisions shows, and music",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Plex",
-      "image": "lscr.io/linuxserver/plex:latest",
-      "ports": ["32400:32400/tcp"],
       "env": [
-        {"default": "1000", "label": "PUID", "name": "PUID"},
-        {"default": "1000", "label": "PGID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "TZ", "name": "TZ"},
-        {"default": "docker", "label": "VERSION", "name": "VERSION"},
-        {"default": "ADD YOUR PLEX CLAIM HERE", "label": "PLEX_CLAIM", "name": "PLEX_CLAIM"}
+        {"label": "Plex Claim Code", "name": "PLEX_CLAIM", "description": "Get a new plex claim from https://www.plex.tv/claim which is only valid for 4 minutes"}
       ],
-      "volumes": [
-        {"bind": "/docker/plex", "container": "/config"},
-        {"bind": "/truenas/TrueMedia/anime", "container": "/anime"},
-        {"bind": "/truenas/TrueMedia/tv", "container": "/tv"},
-        {"bind": "/truenas/TrueMedia/movies", "container": "/movies"},
-        {"bind": "/truenas/TrueMedia/music", "container": "/music"},
-        {"bind": "/truenas/TrueMedia/youtube", "container": "/youtube"},
-        {"bind": "/truenas/TrueMedia/prawn", "container": "/prawn"},
-        {"bind": "/truenas/TrueMedia/recycle", "container": "/recycle"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/plex.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
@@ -284,7 +204,7 @@
         {"label": "Admin Password", "name": "POSTGRES_PASSWORD"}
       ],
       "volumes": [
-        {"container": "/var/lib/postgresql/data"}
+        {"bind": "/docker/postgresql", "container": "/var/lib/postgresql/data"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -303,7 +223,7 @@
         {"label": "Admin Password", "name": "PGADMIN_DEFAULT_PASSWORD"}
       ],
       "volumes": [
-        {"container": "/var/lib/pgadmin/data"}
+        {"bind": "/docker/pgadmin", "container": "/var/lib/pgadmin/data"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -358,8 +278,8 @@
         {"label": "Database Name: This database will need to be manually created", "name": "DB_NAME", "default": "wiki"}
       ],
       "volumes": [
-        {"bind": "/docker/wikijs", "container": "/config"},
-		{"bind": "/docker/wikijs", "container": "/wiki/data/content"}
+        {"bind": "/docker/wikijs/config", "container": "/config"},
+        {"bind": "/docker/wikijs/content", "container": "/wiki/data/content"}
       ],
       "restart_policy": "unless-stopped"
     },
@@ -368,59 +288,42 @@
       "title": "PinchFlat",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/pinchflat.png",
       "description": "YouTube media downloads and management.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "PinchFlat",
-      "image": "keglin/pinchflat:latest",
-      "network": "bridge",
-      "ports": ["8945:8945/tcp"],
-      "volumes": [
-        {"bind": "/docker/pinchflat", "container": "/config"},
-        {"bind": "/docker/youtube", "container": "/downloads"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/pinchflat.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "MeTube",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/metube.png",
       "description": "Web UI for YouTube-DL",
-      "type": 1,
-      "platform": "linux",
+      "type": 3,
       "name": "MeTube",
-      "image": "ghcr.io/alexta69/metube",
-      "network": "bridge",
-      "ports": ["8081:8081/tcp"],
-      "volumes": [
-        {"bind": "/docker/downloads", "container": "/downloads"}
-      ],
-      "restart_policy": "unless-stopped"
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/metube.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
       "categories": ["All"],
       "title": "File Browser",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/filebrowser.png",
       "description": "File managing interface for specified directories.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "FileBrowser",
-      "image": "filebrowser/filebrowser:s6",
-      "network": "bridge",
-      "ports": ["8080:80/tcp"],
-      "env": [
-        {"default": "1000", "label": "User ID", "name": "PUID"},
-        {"default": "1000", "label": "Group ID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"}
-      ],
-      "volumes": [
-        {"bind": "/docker/", "container": "/srv"},
-        {"bind": "/docker/filebrowser", "container": "/database/filebrowser.db"},
-        {"bind": "/docker/filebrowser", "container": "/config/settings.json"}
-      ],
-      "restart_policy": "unless-stopped"
+      "repository": {
+        "stackfile": "Template/Stack/filebrowser.yaml",
+        "url": "https://github.com/SighMonIs/portainer"
+      }
     },
     {
-      "categories": ["All"],
+	    "categories": ["All"],
       "title": "WireGuard Easy",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/wireguard.png",
       "description": "The easiest way to run WireGuard VPN with a web-based admin UI.",

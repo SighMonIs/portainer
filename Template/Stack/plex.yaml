@@ -1,0 +1,65 @@
+version: "3.2"
+
+volumes:
+  media-anime:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/anime
+      
+  media-movies:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/movies
+      
+  media-music:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/music
+      
+  media-prawn:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/prawn
+      
+  media-recycle:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/recycle
+      
+  media-tv:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/tv
+
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Melbourne
+      - VERSION=docker
+      - PLEX_CLAIM=
+    volumes:
+      - /docker/plex:/config
+      - media-anime:/anime
+      - media-movies:/movies
+      - media-music:/music
+      - media-prawn:/prawn
+      - media-recycle:/recycle
+      - media-tv:/tv
+    restart: unless-stopped

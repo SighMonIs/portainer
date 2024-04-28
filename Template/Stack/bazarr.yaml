@@ -1,0 +1,40 @@
+version: "3.2"
+
+volumes:
+  media-anime:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/anime
+
+  media-movies:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/movies
+      
+  media-tv:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/tv
+
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Melbourne
+    volumes:
+      - /docker/bazarr:/config
+      - media-anime:/anime
+      - media-movies:/movies
+      - media-tv:/tv
+    ports:
+      - 6767:6767
+    restart: unless-stopped

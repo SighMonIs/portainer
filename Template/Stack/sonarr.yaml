@@ -1,0 +1,48 @@
+version: "3.2"
+
+volumes:
+  media-anime:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/anime
+      
+  media-downloads:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/downloads
+      
+  media-recycle:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/recycle
+      
+  media-tv:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media/tv
+
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Melbourne
+    volumes:
+      - /docker/sonarr:/config
+      - media-anime:/anime
+      - media-downloads:/downloads
+      - media-recycle:/recycle
+      - media-tv:/tv
+    ports:
+      - 8989:8989
+    restart: unless-stopped
