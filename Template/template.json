@@ -135,6 +135,7 @@
       "platform": "linux",
       "name": "Maintainerr",
       "image": "jorenn92/maintainerr:latest",
+      "user": "1000:1000",
       "ports": ["8154:80/tcp"],
       "env": [
         {"default": "1000", "label": "PUID", "name": "PUID"},
