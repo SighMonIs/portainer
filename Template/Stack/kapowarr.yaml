@@ -5,7 +5,7 @@ volumes:
     driver: local
     driver_opts:
       type: nfs
-      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      o: nfsvers=4,addr=192.168.111.111,username=simon,password=0sar1988,soft,nolock,rw,nobrl
       device: :/mnt/data/media/comics
 
 services:
