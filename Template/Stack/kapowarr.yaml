@@ -9,11 +9,16 @@ volumes:
       device: :/mnt/data/media/comics
 
 services:
-    kapowarr:
-        container_name: kapowarr
-        volumes:
-            - /docker/kapowarr:/app/db'
-            - media:/media
-        ports:
-            - '5656:5656'
-        image: 'mrcas/kapowarr:latest'
+  kapowarr:
+    container_name: kapowarr
+      volumes:
+        - /docker/kapowarr:/app/db
+        - media:/media
+      ports:
+        - 5656:5656
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=Australia/Melbourne
+      restart: unless-stopped
+      image: mrcas/kapowarr:latest

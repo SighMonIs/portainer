@@ -1,0 +1,12 @@
+services:
+  flaresolverr:
+    container_name: kapowarr
+    ports:
+      - 8191:8191/tcp
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Melbourne
+      - LOG_LEVEL=info
+    restart: unless-stopped
+    image: ghcr.io/flaresolverr/flaresolverr:latest
