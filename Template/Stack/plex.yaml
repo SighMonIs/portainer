@@ -5,14 +5,13 @@ volumes:
     driver: local
     driver_opts:
       type: nfs
-      o: nfsvers=4,addr=192.168.111.111,uid=1000,gid=1000,soft,nolock,rw
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
       device: :/mnt/data/media
 
 services:
   plex:
     image: lscr.io/linuxserver/plex:latest
     container_name: plex
-    network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
