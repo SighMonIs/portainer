@@ -131,7 +131,7 @@
       "title": "Maintainerr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/maintainerr.png",
       "description": "Monitor and remove unwatched Plex media.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Maintainerr",
       "repository": {
