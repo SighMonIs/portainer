@@ -1,12 +1,12 @@
 version: "3.2"
 
 volumes:
-  media-downloads:
+  media:
     driver: local
     driver_opts:
       type: nfs
       o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
-      device: :/mnt/data/media/downloads
+      device: :/mnt/data/media
 
 services:
   metube:
@@ -16,4 +16,4 @@ services:
     ports:
       - "8081:8081"
     volumes:
-      - media-downloads:/downloads
+      - media:/media

@@ -1,27 +1,13 @@
 version: "3.2"
 
 volumes:
-  media-downloads:
+  media:
     driver: local
     driver_opts:
       type: nfs
       o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
-      device: :/mnt/data/media/downloads
+      device: :/mnt/data/media
 
-  media-music:
-    driver: local
-    driver_opts:
-      type: nfs
-      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
-      device: :/mnt/data/media/music
-      
-  media-recycle:
-    driver: local
-    driver_opts:
-      type: nfs
-      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
-      device: :/mnt/data/media/recycle
-      
 services:
   lidarr:
     image: lscr.io/linuxserver/lidarr:latest
@@ -32,9 +18,7 @@ services:
       - TZ=Australia/Melbourne
     volumes:
       - /docker/lidarr:/config
-      - media-downloads:/downloads
-      - media-music:/music
-      - media-recycle:/recycle
+      - media:/media
     ports:
       - 8686:8686
     restart: unless-stopped
