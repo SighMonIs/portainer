@@ -18,7 +18,7 @@ services:
       - TZ=Australia/Melbourne
     volumes:
       - /docker/radarr:/config
-      - media:/mediae
+      - media:/media
     ports:
       - 7878:7878
     restart: unless-stopped
