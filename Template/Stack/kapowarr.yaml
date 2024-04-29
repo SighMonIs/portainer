@@ -6,19 +6,19 @@ volumes:
     driver_opts:
       type: nfs
       o: nfsvers=4,addr=192.168.111.111,username=simon,password=0sar1988,soft,nolock,rw,nobrl
-      device: :/mnt/data/media/comics
+      device: :/mnt/data/media
 
 services:
   kapowarr:
     container_name: kapowarr
-      volumes:
-        - /docker/kapowarr:/app/db
-        - media:/media
-      ports:
-        - 5656:5656
-      environment:
-        - PUID=1000
-        - PGID=1000
-        - TZ=Australia/Melbourne
-      restart: unless-stopped
-      image: mrcas/kapowarr:latest
+    volumes:
+      - /docker/kapowarr:/app/db
+      - media:/media
+    ports:
+      - 5656:5656
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Melbourne
+    restart: unless-stopped
+    image: mrcas/kapowarr:latest
