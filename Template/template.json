@@ -347,9 +347,9 @@
     {
       "categories": ["All"],
       "title": "Flaresolverr",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/flaresolverr.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/sonarr.png",
       "description": "need a better description here.",
-      "type": 3,
+      "type": 1,
       "platform": "linux",
       "name": "Flaresolverr",
       "image": "ghcr.io/flaresolverr/flaresolverr:latest",
