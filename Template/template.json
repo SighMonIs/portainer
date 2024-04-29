@@ -260,7 +260,7 @@
       "name": "Wiki.JS",
       "image": "ghcr.io/requarks/wiki:2",
       "network": "bridge",
-      "ports": ["3000:80/tcp"],
+      "ports": ["3000:3000/tcp"],
       "env": [
         {"label": "Database Type", "name": "DB_TYPE", "default": "postgres"},
         {"label": "Database URL", "name": "DB_HOST", "default": "192.168.111.150"},
