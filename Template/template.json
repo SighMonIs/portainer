@@ -354,12 +354,12 @@
       "name": "Flaresolverr",
       "image": "ghcr.io/flaresolverr/flaresolverr:latest",
       "ports": ["8191:8191/tcp"],
-      "env": {
+      "env": [
         {"default": "1000", "label": "User ID", "name": "PUID",},
         {"default": "1000", "label": "Group ID", "name": "PGID"},
         {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"},
         {"default": "info", "label": "LOG_LEVEL", "name": "LOG_LEVEL"}
-      }      
+      ]
     }
   ]
 }
