@@ -1,10 +1,5 @@
 # Portainer Templates V0.1
-I have no idea what I'm doing with GitHub, should have forked, didn't do that, downloaded some stuff and trying to get this to work for just the apps I like. Kinda using this as a backup of sorts for my apps.
-
-### Prerequisites
-
-1. A server/NAS with docker installed.
-2. A Portainer-CE setup.
+Just my person use case apps, made to install as fast as possible with as little down time as possible. Probably wasting my time, but not sure yet. It's been good so far.
 
 ### Installing
 
@@ -33,3 +28,4 @@ I have no idea what I'm doing with GitHub, should have forked, didn't do that, d
 - FileBrowser
 - WireGuard - Easy
 - FlareSolvarr
+- TubeArchivistg
