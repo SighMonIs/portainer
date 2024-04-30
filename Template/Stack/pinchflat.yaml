@@ -10,6 +10,7 @@ volumes:
 
 services:
   pinchflat:
+    container_name: pinchflat
     image: keglin/pinchflat:latest
     ports:
       - '8945:8945'
