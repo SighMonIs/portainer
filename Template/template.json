@@ -227,7 +227,6 @@
       "type": 1,
       "platform": "linux",
       "name": "Mealie",
-	  "network": "bridge",
       "env": [
         {"label": "Database Username", "name": "POSTGRES_USER", "description": "PostgreSQL Username"},
         {"label": "Database Password", "name": "POSTGRES_PASSWORD", "description": "PostgreSQL Password"},
@@ -243,7 +242,7 @@
         {"default": "1", "label": "MAX_WORKERS", "name": "MAX_WORKERS"},
         {"default": "1", "label": "WEB_CONCURRENCY", "name": "WEB_CONCURRENCY"}
       ],
-	  "image": "ghcr.io/mealie-recipes/mealie:v1.5.1",
+      "image": "ghcr.io/mealie-recipes/mealie:v1.5.1",
       "ports": ["9925:9000/tcp"],
       "volumes": [
         {"bind": "/docker/mealie", "container": "/app/data"}
@@ -296,10 +295,7 @@
       "type": 3,
       "name": "MeTube",
       "platform": "linux",
-      "repository": {
-        "stackfile": "Template/Stack/metube.yaml",
-        "url": "https://github.com/SighMonIs/portainer"
-      }
+      "repository": {"stackfile": "Template/Stack/metube.yaml", "url": "https://github.com/SighMonIs/portainer"}
     },
     {
       "categories": ["All"],
@@ -309,10 +305,7 @@
       "type": 3,
       "platform": "linux",
       "name": "FileBrowser",
-      "repository": {
-        "stackfile": "Template/Stack/filebrowser.yaml",
-        "url": "https://github.com/SighMonIs/portainer"
-      }
+      "repository": {"stackfile": "Template/Stack/filebrowser.yaml", "url": "https://github.com/SighMonIs/portainer"}
     },
     {
 	    "categories": ["All"],
@@ -355,7 +348,7 @@
       "image": "ghcr.io/flaresolverr/flaresolverr:latest",
       "ports": ["8191:8191/tcp"],
       "env": [
-        {"default": "1000", "label": "User ID", "name": "PUID",},
+        {"default": "1000", "label": "User ID", "name": "PUID"},
         {"default": "1000", "label": "Group ID", "name": "PGID"},
         {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"},
         {"default": "info", "label": "LOG_LEVEL", "name": "LOG_LEVEL"}
