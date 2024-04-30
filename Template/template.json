@@ -174,7 +174,7 @@
       "platform": "linux",
       "name": "Plex",
       "env": [
-        {"label": "Plex Claim Code", "name": "PLEX_CLAIM", "description": "Get a new plex claim from <a href="https://www.plex.tv/claim">https://www.plex.tv/claim</a> which is only valid for 4 minutes"}
+        {"label": "Plex Claim Code", "name": "PLEX_CLAIM", "description": "Get a new plex claim from https://www.plex.tv/claim which is only valid for 4 minutes"}
       ],
       "repository": {
         "stackfile": "Template/Stack/plex.yaml",
