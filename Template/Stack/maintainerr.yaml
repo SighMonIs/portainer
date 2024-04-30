@@ -8,6 +8,8 @@ services:
         volumes:
           - /docker/maintainerr:/opt/data
         environment:
+          - PGID=1000
+          - PUID=1000
           - TZ=Australia/Melbourne
 #      - DEBUG=true # uncomment to enable debug logs
         ports:
