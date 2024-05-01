@@ -310,7 +310,7 @@
     {
       "categories": ["All"],
       "title": "TubeArchivist",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/filebrowser.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/tubearchivist.png",
       "description": "Downloads youtube shit",
       "type": 3,
       "platform": "linux",
@@ -350,7 +350,7 @@
     {
       "categories": ["All"],
       "title": "Flaresolverr",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/sonarr.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/flaresolverr.png",
       "description": "need a better description here.",
       "type": 1,
       "platform": "linux",
@@ -363,6 +363,16 @@
         {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"},
         {"default": "info", "label": "LOG_LEVEL", "name": "LOG_LEVEL"}
       ]
+    },
+    {
+      "categories": ["All"],
+      "title": "AudioBookshelf",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/audiobookshelf.png",
+      "description": "Audiobookshelf is an open-source self-hosted media server for your audiobooks and podcasts.",
+      "type": 3,
+      "platform": "linux",
+      "name": "AudioBookshelf",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/audiobookshelf.yaml"}
     }
   ]
 }
