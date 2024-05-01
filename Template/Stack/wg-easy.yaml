@@ -5,12 +5,14 @@ services:
     environment:
       - WG_HOST=167.179.129.38
       - PASSWORD=0sar1988
+      - PORT=51821
+      - WG_PORT=51820
     image: weejewel/wg-easy
     volumes:
       - /docker/wg-easy:/etc/wireguard
     ports:
       - "51820:51820/udp"
-      - "51822:51821/tcp"
+      - "51821:51821/tcp"
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
