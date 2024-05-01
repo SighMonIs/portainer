@@ -325,6 +325,7 @@
       "type": 3,
       "platform": "linux",
       "name": "Wireguard-Easy",
+      "network": "host",
       "repository": { "url": "https://github.com/SighMonIs/portainer", "stackfile": "Template/Stack/wg-easy.yaml" }
     },
     {
