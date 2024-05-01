@@ -21,6 +21,7 @@ services:
       - UI_CHART_TYPE=0
     image: ghcr.io/wg-easy/wg-easy
     container_name: wg-easy
+    network: host
     volumes:
       - /docker/wg-easy:/etc/wireguard
     ports:
