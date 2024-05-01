@@ -16,7 +16,7 @@ services:
     ports:
       - 9300:8000
     volumes:
-      - media:/youtube
+      - youtube:/youtube
       - /docker/tubearchivist:/cache
     environment:
       - ES_URL=http://192.168.111.150:9200     # needs protocol e.g. http and port
