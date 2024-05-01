@@ -318,7 +318,6 @@
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/tubearchivist.yaml"}
     },
       "categories": ["All"],
-    {
       "title": "WireGuard-Easy",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/wireguard.png",
       "description": "The easiest way to run WireGuard VPN with a web-based admin UI.",
