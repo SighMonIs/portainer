@@ -317,35 +317,15 @@
       "name": "TubeArchivist",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/tubearchivist.yaml"}
     },
-    {
       "categories": ["All"],
-      "title": "WireGuard Easy",
+    {
+      "title": "WireGuard-Easy",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/wireguard.png",
       "description": "The easiest way to run WireGuard VPN with a web-based admin UI.",
-      "type": 1,
+      "type": 3,
       "platform": "linux",
       "name": "Wireguard-Easy",
-      "image": "ghcr.io/wg-easy/wg-easy",
-      "network": "bridge",
-      "ports": ["51820:51820/udp","51821:51821/tcp"],
-      "env": [
-        {"default": "1000", "label": "User ID", "name": "PUID", "description": "This is the user ID"},
-        {"default": "1000", "label": "Group ID", "name": "PGID"},
-        {"default": "Australia/Melbourne", "label": "Timezone", "name": "TZ"},
-        {"default": "167.179.129.38", "label": "Host IP", "name": "WG_HOST", "description": "IP Address from ISP"},
-        {"label": "Admin Password", "name": "PASSWORD", "description": "Leave blank to access WebUI without loggin"},
-        {"default": "51821", "label": "WireGuard VPN Port", "name": "PORT"},
-        {"default": "51820", "label": "WireGuard WebUI Port", "name": "WG_PORT"},
-        {"default": "1.1.1.1", "label": "Default DNS", "name": "WG_DEFAULT_DNS", "description": "Don't change this"},
-        {"default": "10.8.0.x", "label": "IP Address Range", "name": "WG_DEFAULT_ADDRESS"},
-        {"default": "0.0.0..0/0, ::/0", "label": "Allowed IP Addresses", "name": "WG_ALLOWED_IPS"}
-      ],
-      "volumes": [
-        {"bind": "/docker/wg-easy", "container": "/etc/wireguard"}
-      ],
-      "cap_add": ["NET_ADMIN", "SYS_MODULE"],
-      "sysctls": ["net.ipv4.ip_forward=1", "net.ipv4.conf.all.src_valid_mark=1"],
-      "restart_policy": "unless-stopped"
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/wg-easy.yaml"}
     },
     {
       "categories": ["All"],
