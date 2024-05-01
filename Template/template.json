@@ -317,7 +317,7 @@
       "name": "TubeArchivist",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/tubearchivist.yaml"}
     },
-    }
+    {
       "categories": ["All"],
       "title": "WireGuard-Easy",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/wireguard.png",
@@ -325,7 +325,7 @@
       "type": 3,
       "platform": "linux",
       "name": "Wireguard-Easy",
-      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/wg-easy.yaml"}
+      "repository": { "url": "https://github.com/SighMonIs/portainer", "stackfile": "Template/Stack/wg-easy.yaml" }
     },
     {
       "categories": ["All"],
