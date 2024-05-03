@@ -354,6 +354,19 @@
       "platform": "linux",
       "name": "AudioBookshelf",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/audiobookshelf.yaml"}
+    },
+    {
+      "categories": ["All"],
+      "title": "Watchtower",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/watchtower.png",
+      "description": "A container-based solution for automating Docker container base image updates.",
+      "type": 1,
+      "platform": "linux",
+      "name": "Watchtower",
+      "image": "containrrr/watchtower",
+      "volumes": [
+        {"bind": "/var/run/docker.sock", "container": "/var/run/docker.sock"}
+      ]
     }
   ]
 }
