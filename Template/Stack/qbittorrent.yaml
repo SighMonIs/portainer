@@ -20,7 +20,7 @@ services:
       - TORRENTING_PORT=6881
     volumes:
       - /docker/qbittorrent:/config
-      - media:/downloads
+      - media:/media
     ports:
       - 8080:8080
       - 6881:6881
