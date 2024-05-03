@@ -7,7 +7,7 @@ volumes:
       type: nfs
       o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
       device: :/mnt/data/media
-
+      
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -15,12 +15,12 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Australia/Melbourne
       - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
     volumes:
       - /docker/qbittorrent:/config
-      - media:/media
+      - media:/downloads
     ports:
       - 8080:8080
       - 6881:6881
