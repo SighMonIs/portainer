@@ -367,6 +367,26 @@
       "volumes": [
         {"bind": "/var/run/docker.sock", "container": "/var/run/docker.sock"}
       ]
+    },
+    {
+      "categories": ["All"],
+      "title": "PiHole",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/pihole.png",
+      "description": "Ad blocker",
+      "type": 3,
+      "platform": "linux",
+      "name": "PiHole",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/pihole.yaml"}
+    },
+    {
+      "categories": ["All"],
+      "title": "Manyfold",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/manyfold.png",
+      "description": "Audiobookshelf is an open-source self-hosted media server for your audiobooks and podcasts.",
+      "type": 3,
+      "platform": "linux",
+      "name": "Manyfold",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/manyfold.yaml"}
     }
   ]
 }
