@@ -360,7 +360,7 @@
       "title": "Watchtower",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/watchtower.png",
       "description": "A container-based solution for automating Docker container base image updates.",
-      "type": 3,
+      "type": 1,
       "platform": "linux",
       "name": "Watchtower",
       "image": "containrrr/watchtower",
