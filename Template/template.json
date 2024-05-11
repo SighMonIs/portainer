@@ -387,6 +387,16 @@
       "platform": "linux",
       "name": "Manyfold",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/manyfold.yaml"}
+    },
+    {
+      "categories": ["All"],
+      "title": "Readarr",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/readarr.png",
+      "description": "Book Manager and Automation (Sonarr for Ebooks).",
+      "type": 3,
+      "platform": "linux",
+      "name": "Readarr",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/readarr.yaml"}
     }
   ]
 }
