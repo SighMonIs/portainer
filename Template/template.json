@@ -411,7 +411,7 @@
     {
       "categories": ["All"],
       "title": "Hotio qBittorrent",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/homepage.png",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
       "description": "Hotio qBittorrent",
       "type": 3,
       "platform": "linux",
