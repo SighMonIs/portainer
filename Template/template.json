@@ -407,6 +407,16 @@
       "platform": "linux",
       "name": "Homepage",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/homepage.yaml"}
+    },
+    {
+      "categories": ["All"],
+      "title": "Hotio qBittorrent",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/homepage.png",
+      "description": "Hotio qBittorrent",
+      "type": 3,
+      "platform": "linux",
+      "name": "Hotio qBittorrent",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/hotioqbittorrent.yaml"}
     }
   ]
 }
