@@ -43,19 +43,6 @@
     },
     {
       "categories": ["All"],
-      "title": "qBittorrent",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
-      "description": "The qBittorrent project aims to provide an open-source software alternative to Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
-      "type": 3,
-      "platform": "linux",
-      "name": "qBittorrent",
-      "repository": {
-        "stackfile": "Template/Stack/qbittorrent.yaml",
-        "url": "https://github.com/SighMonIs/portainer"
-      }
-    },
-    {
-      "categories": ["All"],
       "title": "Sonarr",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/sonarr.png",
       "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
@@ -410,13 +397,13 @@
     },
     {
       "categories": ["All"],
-      "title": "Hotio qBittorrent",
+      "title": "qBittorrent",
       "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/qbittorrent.png",
       "description": "Hotio qBittorrent",
       "type": 3,
       "platform": "linux",
-      "name": "Hotio qBittorrent",
-      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/hotioqbittorrent.yaml"}
+      "name": "qBittorrent",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/qbittorrent.yaml"}
     }
   ]
 }

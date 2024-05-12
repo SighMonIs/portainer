@@ -10,19 +10,16 @@ volumes:
       
 services:
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
+    image: ghcr.io/hotio/qbittorrent
+    ports:
+      - "8080:8080"
     environment:
       - PUID=1000
       - PGID=1000
+      - UMASK=002
       - TZ=Australia/Melbourne
-      - WEBUI_PORT=8080
-      - TORRENTING_PORT=6881
+      - WEBUI_PORTS=8080/tcp,8080/udp
     volumes:
       - /docker/qbittorrent:/config
       - media:/media
-    ports:
-      - 8080:8080
-      - 6881:6881
-      - 6881:6881/udp
-    restart: unless-stopped
