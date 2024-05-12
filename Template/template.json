@@ -397,6 +397,16 @@
       "platform": "linux",
       "name": "Readarr",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/readarr.yaml"}
+    },
+    {
+      "categories": ["All"],
+      "title": "Homepage",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/homepage.png",
+      "description": "A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages. Easily configured via YAML files or through docker label discovery. ",
+      "type": 3,
+      "platform": "linux",
+      "name": "Homepage",
+      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/homepage.yaml"}
     }
   ]
 }
