@@ -404,6 +404,25 @@
       "platform": "linux",
       "name": "qBittorrent",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/qbittorrent.yaml"}
+    },
+    {
+      "categories": ["Other", "Tools"],
+      "title": "Guacamole",
+      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/guacamole.png",
+      "description": "A clientless remote desktop gateway.",
+      "image": "oznu/guacamole:latest",
+      "name": "guacamole",
+      "note": "The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
+      "platform": "linux",
+      "ports": ["8100:8080/tcp"],
+      "restart_policy": "unless-stopped",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/docker/guacamole",
+          "container": "/config"
+        }
+      ]
     }
   ]
 }
