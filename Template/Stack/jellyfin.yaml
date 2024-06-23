@@ -18,4 +18,7 @@ services:
       - /docker/jellyfin/confg:/config
       - /docker/jellyfin/cache:/cache
       - media:/media
+    ports:
+      - 8096:8096/tcp
+      - 8920:8920/tcp
     restart: 'unless-stopped'
