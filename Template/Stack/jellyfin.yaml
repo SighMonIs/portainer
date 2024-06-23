@@ -1,0 +1,21 @@
+version: "3.2"
+
+volumes:
+  media:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=192.168.111.111,soft,nolock,rw
+      device: :/mnt/data/media
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    user: 1000:1000
+    network_mode: 'host'
+    volumes:
+      - /docker/jellyfin/confg:/config
+      - /docker/jellyfin/cache:/cache
+      - media:/media
+    restart: 'unless-stopped'

@@ -5,7 +5,6 @@ services:
     environment:
       - LANG=en
       - WG_HOST=167.179.129.38
-      - PASSWORD=0sar1988
       - PORT=51821
       - WG_PORT=51820
       - WG_DEFAULT_ADDRESS=10.8.0.x
