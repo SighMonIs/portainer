@@ -471,7 +471,7 @@
       "description": "Linkwarden",
       "type": 3,
       "platform": "linux",
-      "name": "Linkwarden",
+      "name": "linkwarden",
       "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/linkwarden.yaml"}
     }
   ]
