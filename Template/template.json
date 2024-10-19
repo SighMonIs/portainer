@@ -463,16 +463,6 @@
           "container": "/app/config"
         }
       ]
-    },
-    {
-      "categories": ["All"],
-      "title": "Linkwarden",
-      "logo": "https://raw.githubusercontent.com/SighMonIs/portainer/main/Images/jellyfin.png",
-      "description": "Linkwarden",
-      "type": 3,
-      "platform": "linux",
-      "name": "linkwarden",
-      "repository": { "url": "https://github.com/SighMonIs/portainer","stackfile": "Template/Stack/linkwarden.yaml"}
     }
   ]
 }
